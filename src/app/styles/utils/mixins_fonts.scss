@@ -1,0 +1,104 @@
+@mixin h1 {
+  font-family: $ysabeau-medium;
+  font-weight: 500;
+  line-height: 110%;
+  letter-spacing: 0;
+  @include responsive-property(font-size, 100px, 75px, 65px, 40px, 32px);
+}
+
+@mixin h2 {
+  font-family: $ysabeau-medium;
+  font-weight: 500;
+  line-height: 110%;
+  letter-spacing: 0;
+  @include responsive-property(font-size, 60px, 50px, 45px, 36px, 28px);
+}
+
+@mixin p3 {
+  font-family: $ysabeau-semibold;
+  font-weight: 600;
+  line-height: 110%;
+  letter-spacing: 0;
+  @include responsive-property(font-size, 35px, 30px, 28px, 18px, 18px);
+}
+
+@mixin p4 {
+  font-family: $ysabeau-medium;
+  font-weight: 500;
+  line-height: 110%;
+  letter-spacing: 0;
+  @include responsive-property(font-size, 22px, 18px, 16px, 16px, 16px);
+}
+
+@mixin p5 {
+  font-family: $font-family-futura-medium;
+  font-weight: 450;
+  line-height: 120%;
+  letter-spacing: 0.62em;
+  @include responsive-property(font-size, 18px, 16px, 15px, 13px, 13px);
+}
+
+@mixin t1 {
+  font-family: $font-family-futura-book;
+  line-height: 110%;
+  letter-spacing: 0;
+  @include responsive-property(font-size, 20px, 18px, 16px, 16px, 16px);
+}
+
+@mixin t1-medium {
+  font-family: $font-family-futura-medium;
+  line-height: 110%;
+  letter-spacing: 0;
+  @include responsive-property(font-size, 20px, 18px, 16px, 16px, 16px);
+}
+
+@mixin t2 {
+  font-family: $font-family-futura-book;
+  line-height: 120%;
+  letter-spacing: 0;
+  @include responsive-property(font-size, 18px, 14px, 14px, 14px, 14px);
+}
+
+@mixin t3 {
+  font-family: $font-family-futura-book;
+  line-height: 120%;
+  letter-spacing: 0;
+  @include responsive-property(font-size, 16px, 12px, 12px, 12px, 12px);
+}
+
+@mixin tr {
+  font-family: $font-family-runs;
+  line-height: 120%;
+  letter-spacing: 0;
+  @include responsive-property(font-size, 16px, 13px, 12px, 12px, 12px);
+}
+
+@mixin tabs-text {
+  font-family: $ysabeau-semibold;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: -0.04em;
+  @include responsive-property(font-size, 16px, 12px, 12px, 12px, 12px);
+}
+
+@mixin button-text {
+  font-family: $ysabeau-normal;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0;
+  @include responsive-property(font-size, 16px, 12px, 12px, 12px, 12px);
+}
+
+@mixin menu-text {
+  font-family: $ysabeau-semibold;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 0;
+  @include responsive-property(font-size, 16px, 12px, 12px, 12px, 12px);
+}
+@mixin menu-text-futura {
+  font-family: $font-family-futura-book;
+  line-height: 120%;
+  letter-spacing: 0;
+  @include responsive-property(font-size, 16px, 12px, 12px, 12px, 12px);
+}

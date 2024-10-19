@@ -1,0 +1,12 @@
+.imageContainer {
+  overflow: hidden;
+}
+
+.image {
+  transform: scale(1.2);
+  transition: transform 1s ease-in-out;
+}
+
+.inViewport {
+  transform: scale(1);
+}

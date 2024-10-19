@@ -1,0 +1,246 @@
+.section {
+  @include responsive-spacing(padding-top, 150px, 110px, 100px, 70px, 60px);
+  @include responsive-spacing(padding-bottom, 150px, 110px, 100px, 70px, 60px);
+}
+
+.infoBlock {
+  display: flex;
+  align-items: flex-end;
+  @include responsive-spacing(padding-left, 30px, 25px, 20px, 18px, 15px);
+  @include responsive-spacing(padding-right, 30px, 25px, 20px, 18px, 15px);
+
+  justify-content: space-between;
+  @include tablet {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: #{apply-wv(22px, wv-768)};
+  }
+  @include mobile {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    row-gap: #{apply-wv(20px, wv-360)};
+  }
+}
+
+.titles {
+  @include responsive-property(width, 760px, 640px, 615px, 462px, 320px);
+}
+
+.title {
+  @include p5;
+
+  text-transform: uppercase;
+  color: $yellow;
+}
+
+.subtitle {
+  @include responsive-spacing(margin-top, 40px, 30px, 25px, 22px, 20px);
+  @include h2;
+
+  text-transform: uppercase;
+  color: $yellow;
+}
+
+.description {
+  @include t1;
+
+  line-height: 113.9%;
+  @include responsive-property(width, 380px, 280px, 279px, 415px, 360px);
+  @include responsive-property(margin-right, 70px, 37px, 20px, 30px, 0.1px);
+  @include laptop {
+    line-height: 124%;
+  }
+  @include mobile {
+    width: 100%;
+  }
+
+  [class*='highlighted'] {
+    color: $yellow;
+  }
+
+  p {
+    @include responsive-property(margin-bottom, 6px, 0.1px, 0.1px, 0.1px, 0.1px);
+
+    opacity: 0.78;
+    @include laptop {
+      font-size: wv-1280(18px);
+    }
+  }
+}
+
+.contentBlock {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  @include responsive-spacing(padding-top, 80px, 60px, 50px, 40px, 40px);
+  @include tablet {
+    flex-direction: column;
+  }
+}
+
+.leftSideContentBlock {
+  position: relative;
+  width: 51%;
+  @include responsive-spacing(margin-left, 10px, 10px, 10px, 0.1px, 0.1px);
+  @include responsive-spacing(margin-right, 10px, 10px, 7px, 0.1px, 0.1px);
+  @include responsive-spacing(height, 1075px, 800px, 710px, 0.1px, 0.1px);
+  @include tablet {
+    display: none;
+  }
+  @include mobile {
+    display: none;
+  }
+}
+
+.rightSideContentBlock {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 50%;
+
+  @include responsive-spacing(margin-left, 10px, 5px, 10px, 0.1px, 0.1px);
+  @include responsive-spacing(margin-right, 30px, 25px, 18px, 0.1px, 0.1px);
+  @include tablet {
+    width: 100%;
+  }
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.tabs {
+  @include responsive-property(height, 56px, 42px, 42px, 36px, 46px);
+
+  display: flex;
+  white-space: nowrap;
+  @include tablet {
+    margin-left: wv-768(18px);
+    margin-right: wv-768(18px);
+  }
+
+  @include mobile {
+    padding-left: wv-360(15px);
+    padding-right: wv-360(15px);
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include responsive-property(height, 56px, 42px, 42px, 36px, 42px);
+  @include responsive-property(min-width, 187px, 138px, 124px, 122px, 115px);
+  @include responsive-property(width, 187px, 138px, 124px, 122px, 115px);
+  @include laptop {
+    padding: wv-1280(15px) !important;
+  }
+
+  @include tablet {
+    padding: wv-768(12px) !important;
+  }
+
+  @include tablet-l {
+    padding: wv-768(12px) !important;
+  }
+
+  @include tablet-p {
+    padding: wv-768(12px) !important;
+  }
+
+  @include mobile {
+    padding: wv-360(15px) wv-360(10px) !important;
+  }
+}
+
+.tab:not(:first-child) {
+  margin-left: -1px;
+  @include responsive-property(min-width, 187px, 138px, 124px, 122px, 115px);
+  @include responsive-property(width, 187px, 138px, 124px, 122px, 115px);
+}
+
+.gallerySlider {
+  @include responsive-spacing(margin-left, 165px, 128px, 104px, 0.1px, 15px);
+  @include responsive-spacing(margin-right, 108px, 73px, 49px, 0.1px, 15px);
+
+  position: relative;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  overflow: hidden;
+  height: 100%;
+
+  &.hidden {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  @include tablet-l {
+    margin-left: wv-768(18px);
+    margin-right: wv-768(18px);
+    padding-left: wv-768(325px) !important;
+    padding-right: wv-768(277px) !important;
+  }
+
+  @include tablet {
+    margin-left: wv-768(18px);
+    margin-right: wv-768(18px);
+    padding-left: wv-768(223px);
+    padding-right: wv-768(177px);
+  }
+}
+
+.containerForArrows {
+  position: relative;
+  @include responsive-spacing(padding-left, 76px, 57px, 57px, 0.1px, 0.1px);
+  @include responsive-spacing(padding-right, 76px, 57px, 57px, 0.1px, 0.1px);
+
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  @include tablet-p {
+    padding-left: wv-1280(10px) !important;
+    padding-right: wv-1280(10px) !important;
+  }
+  @include tablet {
+    position: unset;
+  }
+}
+
+.buttonsBlock {
+  @include responsive-spacing(margin-top, 50px, 35px, 30px, 26px, 20px);
+  @include responsive-property(height, 56px, 42px, 42px, 36px, 94px);
+  @include responsive-property(gap, 8px, 10px, 15px, 12px, 10px);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  white-space: nowrap;
+  @include mobile {
+    flex-direction: column;
+    margin-top: wv-360(25px);
+    margin-bottom: wv-360(25px);
+    align-items: center;
+
+    button,
+    a {
+      width: 100% !important;
+      height: wv-360(42px);
+    }
+  }
+
+  .btn {
+    background: transparent;
+    border: 1px dashed #c98d22;
+    color: $yellow;
+    display: flex;
+    justify-content: center;
+  }
+}

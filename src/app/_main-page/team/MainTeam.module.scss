@@ -1,0 +1,97 @@
+.section {
+  @include responsive-spacing(padding-top, 150px, 110px, 100px, 70px, 60px);
+  @include responsive-spacing(padding-bottom, 150px, 110px, 100px, 70px, 60px);
+  @include responsive-spacing(padding-left, 30px, 25px, 20px, 18px, 15px);
+  @include responsive-spacing(padding-right, 30px, 25px, 20px, 18px, 15px);
+
+  position: relative;
+}
+
+.infoBlock {
+  display: flex;
+  flex-direction: row;
+  @include mobile {
+    flex-direction: column;
+    gap: wv-360(20px);
+  }
+}
+
+.title {
+  @include h2;
+
+  flex: 1;
+  max-width: 50%;
+  text-transform: uppercase;
+  color: $gray-blue;
+  @include tablet {
+    max-width: 48%;
+  }
+}
+
+.subtitle {
+  @include t1;
+
+  flex: 1;
+  text-align: start;
+  color: $gray-blue;
+  @include responsive-property(max-width, 606px, 433px, 400px, 366px, 318px);
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.gallery {
+  @include responsive-spacing(padding-top, 80px, 50px, 50px, 42px, 40px);
+
+  position: relative;
+}
+
+.image {
+  position: relative;
+}
+
+.text {
+  max-width: 200px;
+  @include responsive-spacing(margin-top, 20px, 15px, 15px, 12px, 15px);
+
+  color: $orange;
+}
+
+.description {
+  @include t3;
+  @include responsive-spacing(margin-top, 10px, 10px, 10px, 8px, 10px);
+  @include tablet {
+    width: 75%;
+  }
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: #{apply-wv(20px, wv-360)};
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+}
+
+.arrows {
+  top: -18.6%;
+  right: 0%;
+  @include wide {
+    top: -11.4%;
+  }
+  @include tablet {
+    display: none;
+  }
+}
+
+.slider:last-child {
+  margin-right: 0;
+}

@@ -1,0 +1,299 @@
+.headerWrapper {
+  transition: top 0.3s ease-in-out;
+  position: fixed;
+  width: calc(100% - 20px);
+  top: 10px;
+  left: 10px;
+  z-index: $z-index-header;
+  opacity: 0;
+
+  @include tablet {
+    width: calc(100vw - 20px);
+  }
+
+  @include mobile {
+    width: calc(100vw - 20px);
+  }
+}
+
+.visible {
+  top: 10px;
+  left: 10px;
+}
+
+.hidden {
+  top: -100px;
+}
+
+.header {
+  width: 100%;
+  height: 42px;
+  color: $orange;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  position: relative;
+  @include responsive-property(height, 56px, 42px, 42px, 36px, 42px);
+}
+
+.headerContent {
+  @include menu-text;
+
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border: 1px dashed $orange-50 !important;
+  border-right: none !important;
+  border-left: none !important;
+
+  @include tablet {
+    border: 1px dashed $orange-50 !important;
+    border-right: none !important;
+    border-left: none !important;
+  }
+
+  @include mobile {
+    border-right: 1px dashed $orange-50 !important;
+  }
+}
+
+.linksWrapper {
+  width: 100%;
+  display: flex;
+  border-right: 1px dashed $orange-50;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  cursor: pointer;
+  @include responsive-property(width, 136px, 102px, 90.67px, 77.72px, 77.72px);
+  @include responsive-property(height, 25px, 18px, 16.09px, 13.79px, 13.79px);
+
+  & svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.menuBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed $orange-50 !important;
+  padding: wv-1440(15px) !important;
+  width: wv-1440(113px) !important;
+
+  @include responsive-property(gap, 14px, 15px, 15px, 12px, 12px);
+
+  @include wide {
+    padding: wv-1920(20px) !important;
+    width: wv-1920(145px) !important;
+  }
+
+  @include laptop {
+    padding: wv-1280(15px) !important;
+    width: wv-1280(110px) !important;
+  }
+
+  @include tablet {
+    padding: wv-768(12px) !important;
+    padding-right: wv-768(22px) !important;
+    width: wv-768(102px) !important;
+  }
+
+  @include mobile {
+    padding: wv-360(15px) !important;
+    width: wv-360(46px) !important;
+  }
+
+  & span {
+    @include mobile {
+      display: none;
+    }
+  }
+}
+
+.menuBtnClose {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: wv-1440(15px) wv-1440(26.5px) !important;
+  width: wv-1440(128px) !important;
+  @include responsive-property(gap, 8px, 8px, 8px, 0px, 0px);
+
+  @include wide {
+    padding: wv-1920(20px) wv-1920(24.5px) !important;
+    width: wv-1920(146px) !important;
+  }
+
+  @include laptop {
+    padding: wv-1280(15px) wv-1280(17.5px) !important;
+    width: wv-1280(110px) !important;
+  }
+
+  @include tablet {
+    padding: wv-768(12px) wv-768(40px) !important;
+    width: wv-768(92px) !important;
+  }
+
+  @include mobile {
+    padding: wv-360(14px) wv-360(16px) !important;
+    width: wv-360(46px) !important;
+  }
+
+  & span {
+    @include responsive-property(width, 73px, 55px, 55px, 0px, 0px);
+    @include tablet {
+      display: none;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+}
+
+.menuIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include responsive-property(width, 38px, 28px, 25px, 16px, 16px);
+  @include responsive-property(height, 14px, 12px, 12px, 12px, 12px);
+
+  & svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.closeMenuIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include responsive-property(width, 16px, 12px, 12px, 12px, 12px);
+  @include responsive-property(height, 16px, 12px, 12px, 12px, 12px);
+
+  & svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.menulist {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include responsive-spacing(padding, 0px 30px, 0px 25px, 0px 15px, 0px, 0px);
+  @include responsive-property(column-gap, 30px, 20px, 25px, 0px, 0px);
+
+  @include tablet {
+    display: none;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.linksVisible {
+  visibility: visible;
+  opacity: 1;
+  transition:
+    opacity 0.5s ease,
+    visibility 0s;
+}
+
+.linksHidden {
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.5s ease,
+    visibility 0s 0.5s;
+}
+
+.menulist a {
+  color: $orange;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+
+  @include hover {
+    opacity: 0.8;
+  }
+}
+
+.numberBtn {
+  @include menu-text;
+
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border: none !important;
+  white-space: nowrap;
+
+  @include responsive-spacing(padding, 20px 50px, 15px 50px, 15px 45px, 12px 27px, 1px 1px);
+
+  & a {
+    color: $orange;
+  }
+
+  @include tablet {
+    display: none;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.numberBtnAdaptive {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: wv-768(8px) !important;
+    border: none !important;
+    width: wv-768(36px);
+    height: wv-768(36px);
+  }
+
+  @include mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: wv-360(9px) !important;
+    border: none !important;
+    width: wv-360(42px);
+    height: wv-360(42px);
+  }
+}
+
+.phoneWrapper {
+  position: relative;
+  width: wv-768(20px);
+  height: wv-768(20px);
+
+  @include mobile {
+    position: relative;
+    width: wv-360(24px);
+    height: wv-360(24px);
+  }
+}
+
+.catalogBtn {
+  @include menu-text;
+  @include responsive-spacing(padding, 20px 50px, 15px 35px, 15px 35px, 12px 35px, 15px 30px);
+  @include mobile {
+    display: none;
+  }
+
+  white-space: nowrap;
+}

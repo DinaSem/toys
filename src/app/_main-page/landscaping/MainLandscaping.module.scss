@@ -1,0 +1,108 @@
+.section {
+  @include responsive-spacing(padding-top, 150px, 110px, 100px, 70px, 60px);
+  @include responsive-spacing(padding-bottom, 150px, 110px, 100px, 70px, 60px);
+  @include responsive-spacing(padding-left, 10px, 10px, 10px, 10px, 10px);
+  @include responsive-spacing(padding-right, 120px, 85px, 47px, 10px, 10px);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include tablet {
+    flex-direction: column;
+    gap: #{apply-wv(140px, wv-768)};
+  }
+  @include mobile {
+    flex-direction: column;
+    gap: #{apply-wv(120px, wv-360)};
+  }
+}
+
+.sectionGallery {
+  @include responsive-spacing(padding-top, 150px, 110px, 100px, 142px, 60px);
+  @include responsive-spacing(padding-bottom, 150px, 110px, 100px, 70px, 60px);
+  @include responsive-spacing(padding-left, 31px, 25px, 20px, 18px, 15px);
+  @include responsive-spacing(padding-right, 31px, 25px, 20px, 18px, 15px);
+}
+
+.coverImage {
+  position: relative;
+  @include responsive-property(width, 950px, 710px, 630px, 748px, 340px);
+  @include responsive-property(height, 1360px, 1020px, 900px, 480px, 340px);
+}
+
+.info {
+  @include responsive-property(width, 720px, 550px, 545px, 540px, 330px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image {
+  position: relative;
+  @include responsive-property(width, 183.61px, 137.71px, 123.41px, 88.15px, 88.15px);
+  @include responsive-property(height, 230.811px, 173.11px, 153.88px, 109.91px, 109.91px);
+
+  width: 183px;
+  height: 230px;
+}
+
+.title {
+  @include responsive-spacing(margin-top, 40px, 33.14px, 28.12px, 24.01px, 32.01px);
+  @include p5;
+
+  text-transform: uppercase;
+  text-align: center;
+  color: $gray-blue;
+}
+
+.subtitle {
+  @include responsive-spacing(margin-top, 40px, 30px, 25px, 22px, 20px);
+  @include h2;
+
+  text-transform: uppercase;
+  text-align: center;
+  color: $gray-blue;
+}
+
+.descriptions {
+  width: 100%;
+  @include responsive-spacing(margin-top, 40px, 30px, 25px, 22px, 30px);
+
+  display: flex;
+  justify-content: space-between;
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+    gap: #{apply-wv(20px, wv-360)};
+  }
+}
+
+.description {
+  @include responsive-property(width, 336px, 260px, 260px, 260px, 305px);
+  @include t1;
+
+  color: $gray-blue;
+
+  &:only-child {
+    text-align: center;
+  }
+
+  &:first-child {
+    text-align: right;
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  &:last-child {
+    text-align: left;
+    @include mobile {
+      text-align: center;
+    }
+  }
+}
+
+.btn {
+  @include responsive-spacing(margin-top, 80px, 60px, 50px, 40px, 40px);
+}

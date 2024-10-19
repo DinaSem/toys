@@ -1,0 +1,72 @@
+.button {
+  @include button-text;
+
+  cursor: pointer;
+  color: $white;
+  text-transform: uppercase;
+  width: fit-content;
+  @include responsive-spacing(padding, 20px 50px, 15px 35px, 15px 35px, 12px 30px, 15px 30px);
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
+  @include hover {
+    opacity: 0.8;
+  }
+}
+
+.tab {
+  letter-spacing: -0.04em;
+  font-weight: 500;
+}
+
+.menu {
+  font-family: $ysabeau_semibold;
+  font-weight: 600;
+}
+
+.orange {
+  border: 1px solid $orange;
+  background: $orange;
+}
+
+.yellow {
+  border: 1px solid $yellow;
+  background: $yellow;
+}
+
+.blue {
+  border: 1px solid $gray-blue;
+  background: $gray-blue;
+}
+
+.transparent.orange {
+  background: transparent;
+  border: 1px dashed $orange;
+  color: $orange;
+
+  @include hover {
+    border: 1px solid $orange-80;
+  }
+}
+
+.transparent.yellow {
+  background: transparent;
+  border: 1px dashed $yellow;
+  color: $yellow;
+
+  @include hover {
+    border: 1px solid $yellow-80;
+  }
+}
+
+.transparent.blue {
+  background: transparent;
+  border: 1px dashed $gray-blue;
+  color: $gray-blue;
+
+  @include hover {
+    border: 1px solid $gray-blue-80;
+  }
+}

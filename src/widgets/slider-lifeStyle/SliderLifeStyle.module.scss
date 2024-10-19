@@ -1,0 +1,126 @@
+.slide {
+  display: flex;
+  flex-direction: column;
+
+  &:nth-child(6n + 1),
+  &:nth-child(6n + 4) {
+    .image {
+      @include responsive-property(width, 293px, 219px, 194px, 236px, 290px);
+      @include responsive-property(height, 475px, 360px, 320px, 320px, 290px);
+    }
+  }
+
+  &:nth-child(6n + 2),
+  &:nth-child(6n + 5) {
+    .image {
+      @include responsive-property(width, 293px, 219px, 191px, 236px, 290px);
+      @include responsive-property(height, 360px, 270px, 240px, 240px, 290px);
+    }
+  }
+
+  &:nth-child(6n + 3),
+  &:nth-child(6n + 6) {
+    .image {
+      @include responsive-property(width, 293px, 219px, 188px, 236px, 290px);
+      @include responsive-property(height, 440px, 330px, 290px, 290px, 290px);
+    }
+  }
+  @include mobile {
+    margin-right: wv-360(15px);
+  }
+}
+
+.slide:last-child {
+  margin-right: 0;
+}
+
+.image {
+  position: relative;
+}
+
+.text {
+  max-width: 200px;
+
+  @include responsive-spacing(margin-top, 20px, 15px, 15px, 12px, 15px);
+
+  color: $orange;
+}
+
+.title {
+  @include p4;
+
+  text-transform: uppercase;
+}
+
+.description {
+  @include t3;
+  @include responsive-spacing(margin-top, 10px, 10px, 10px, 8px, 10px);
+  @include tablet {
+    width: 75%;
+  }
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: #{apply-wv(20px, wv-360)};
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+}
+
+.arrows {
+  top: 93%;
+  right: 62%;
+  @include standart {
+    top: 92.1%;
+    right: 62%;
+  }
+
+  @include laptop {
+    top: 92.1%;
+    right: 58%;
+  }
+  @include tablet {
+    top: 84.6%;
+    right: 0;
+  }
+}
+
+.arrowsWithoutButton {
+  top: 93%;
+  right: 0;
+  left: 0;
+  @include standart {
+    top: 92.1%;
+    right: 0;
+    left: 0;
+  }
+  @include laptop {
+    top: 92.1%;
+    right: 0;
+  }
+  @include tablet {
+    top: 85.6%;
+    right: 0;
+  }
+}
+
+.button {
+  border: none;
+}
+
+.hiddenButton {
+  display: none;
+}
+
+.bottom {
+  @include responsive-spacing(margin-top, 80px, 30px, 50px, 50px, 30px);
+  @include responsive-spacing(height, 56px, 42px, 42px, 36px, 42px);
+}

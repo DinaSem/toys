@@ -1,0 +1,89 @@
+@import 'variables';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  position: unset;
+  overflow: unset;
+  top: unset;
+  min-height: 100%;
+  width: 100%;
+  background-color: $background-yellow;
+  @include responsive-spacing(padding-top, 66px, 52px, 52px, 46px, 52px);
+
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+section {
+  overflow: hidden;
+}
+
+header {
+  background-color: $background-yellow;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+input,
+button,
+textarea,
+select {
+  margin: 0;
+  font: inherit;
+}
+
+button {
+  background-color: inherit;
+  border: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+p,
+li {
+  margin-bottom: 15px;
+  @include mobile {
+    margin-bottom: 10px;
+  }
+}
+
+input {
+  &:focus-visible {
+    outline: none;
+  }
+}

@@ -1,0 +1,190 @@
+.dropdownMenu {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  top: 100%;
+  left: 0px;
+  background-color: $background-yellow;
+  color: $orange;
+  z-index: $z-index-header;
+  overflow: hidden;
+  visibility: collapse;
+  max-height: 0;
+  opacity: 0;
+  transition:
+    max-height 0.5s ease,
+    opacity 0.5s ease,
+    visibility 0.5s ease;
+  text-transform: uppercase;
+  border: 1px dashed $orange-50;
+  border-top: none;
+
+  @include tablet {
+    border: none;
+  }
+
+  @include mobile {
+    border: none;
+  }
+}
+
+.menuContent {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  overflow: hidden auto;
+
+  @include tablet {
+    flex-direction: column;
+    padding-bottom: wv-360(50px);
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+      display: none;
+    }
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    padding-bottom: wv-360(50px);
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+      display: none;
+    }
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.menuLinksContainer {
+  width: 100%;
+}
+
+.dropdownMenu.open {
+  visibility: visible;
+  transition:
+    max-height 0.5s ease,
+    opacity 0.5s ease,
+    visibility 0.5s ease;
+  max-height: 100vh;
+  opacity: 1;
+}
+
+.dropdownMenu li {
+  margin: 0;
+  padding: 0;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include responsive-spacing(padding, 47px 54px, 42px 32px, 35px 37px, 40px 0px 22px, 30px 5px 23px 5px);
+  @include responsive-property(gap, 40px, 30px, 30px, 30px, 30px);
+
+  @include tablet {
+    align-items: flex-start;
+    border-top: 1px dashed $orange-50;
+    margin: 0px wv-768(22px);
+  }
+
+  @include mobile {
+    align-items: flex-start;
+    border-top: 1px dashed $orange-50;
+    margin: 0px wv-360(5px);
+  }
+}
+
+.contacts ul {
+  display: flex;
+  flex-direction: column;
+
+  @include responsive-property(gap, 10px, 10px, 10px, 10px, 10px);
+}
+
+.phoneAndEmail {
+  display: flex;
+  flex-direction: column;
+
+  @include responsive-property(gap, 10px, 10px, 10px, 10px, 10px);
+}
+
+.email,
+.phone {
+  @include p3;
+
+  text-transform: uppercase;
+
+  @include mobile {
+    @include h2;
+  }
+}
+
+.phone {
+  display: none;
+
+  @include mobile {
+    display: block;
+
+    & a {
+      color: $orange;
+    }
+  }
+}
+
+.address {
+  @include t2;
+
+  white-space: nowrap;
+  text-transform: none;
+  text-align: center;
+
+  @include tablet {
+    @include t1-medium;
+
+    text-align: start;
+  }
+
+  @include mobile {
+    @include t1-medium;
+
+    text-align: start;
+  }
+}
+
+.callButton {
+  background-color: #1e00ff !important;
+  border: none !important;
+  padding: wv-1440(15px) wv-1440(35px);
+  width: wv-1440(182px);
+
+  @include wide {
+    padding: wv-1920(20px) wv-1920(50px);
+    width: wv-1920(249px);
+  }
+
+  @include laptop {
+    padding: wv-1280(15px) wv-1280(35px);
+    width: wv-1280(182px);
+  }
+
+  @include tablet {
+    padding: wv-768(12px) wv-768(30px);
+    width: wv-768(172px);
+  }
+
+  @include mobile {
+    padding: wv-360(12px) wv-360(30px);
+    width: wv-360(172px);
+  }
+}

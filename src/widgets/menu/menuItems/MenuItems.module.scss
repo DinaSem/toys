@@ -1,0 +1,163 @@
+.menuLinksAndCard {
+  display: flex;
+  border-right: 1px dashed $orange-50;
+  width: 100%;
+  justify-content: space-between;
+
+  @include tablet {
+    margin-bottom: wv-768(70px);
+    border-right: none;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    border-right: none;
+  }
+}
+
+.menuLinks {
+  @include responsive-property(gap, 100px, 70px, 60px, 50px, 35px);
+  @include responsive-property(margin, 40px, 30px, 25px, 22px, 10px);
+
+  display: flex;
+  justify-content: space-between;
+  margin-right: 0;
+
+  @include tablet {
+    flex-direction: column;
+    overflow-y: auto;
+    margin-right: 0px;
+    margin-bottom: 0px;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    margin-top: wv-360(40px);
+    margin-bottom: 0px;
+  }
+}
+
+.menuPages {
+  display: flex;
+  flex-direction: column;
+
+  @include responsive-property(gap, 4px, 4px, 4px, 4px, 8px);
+}
+
+.menuBlocks {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding-bottom: 10px;
+
+  @include responsive-property(max-width, 400px, 350px, 320px, 385px, 330px);
+  @include responsive-property(gap, 8px, 8px, 8px, 8px, 8px);
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  @include tablet {
+    overflow-y: visible;
+    padding-bottom: 0;
+  }
+
+  @include mobile {
+    overflow-y: visible;
+    padding-bottom: 0;
+  }
+}
+
+.menuBlocks a {
+  @include p3;
+
+  text-decoration: none;
+  color: $orange;
+
+  @include tablet {
+    @include h2;
+  }
+
+  @include hover {
+    color: $orange-50;
+  }
+}
+
+.menuPages a {
+  @include t2;
+
+  text-decoration: none;
+  text-transform: none;
+  color: $orange;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+
+  @include tablet {
+    @include t1;
+  }
+
+  @include hover {
+    color: $orange-50;
+  }
+}
+
+.menuCard {
+  @include responsive-property(width, 474px, 350px, 310px, 310px, 345px);
+  @include responsive-property(height, 240px, 196px, 180px, 180px, 126px);
+  @include responsive-property(margin, 10px, 10px, 10px, 22px, 40px);
+  @include responsive-property(padding, 20px, 15px, 15px, 22px, 10px);
+
+  background-color: $yellow;
+  position: relative;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+
+  @include tablet {
+    margin-left: 0px;
+  }
+
+  @include mobile {
+    margin-left: wv-360(5px);
+    margin-right: wv-360(5px);
+    margin-bottom: wv-360(30px);
+  }
+
+  & .menuCardName {
+    @include p4;
+    @include responsive-property(width, 260px, 180px, 180px, 180px, 206px);
+  }
+
+  & p {
+    @include menu-text;
+    @include responsive-property(width, 260px, 180px, 180px, 180px, 206px);
+
+    margin-bottom: 0px;
+    text-transform: none;
+  }
+}
+
+.menuCardImg {
+  @include responsive-property(width, 209px, 166px, 147px, 156px, 156px);
+  @include responsive-property(right, -28px, -30px, -26px, -30px, -39px);
+
+  height: 102%;
+  position: absolute;
+  top: 0;
+}

@@ -1,0 +1,23 @@
+{
+  "extends": ["next/core-web-vitals", "prettier", "plugin:storybook/recommended"],
+  "rules": {
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "import/no-default-export": "error"
+  },
+  "overrides": [
+    {
+      // Разрешаем export default для файлов в папке src/app
+      "files": ["src/app/**"],
+      "rules": {
+        "import/no-default-export": "off"
+      }
+    },
+    {
+      // Разрешаем export default для storybook файлов
+      "files": ["**/*.stories.tsx", "**/*.stories.ts", "jest.config.ts", "**/slices/**/*.ts"],
+      "rules": {
+        "import/no-default-export": "off"
+      }
+    }
+  ]
+}

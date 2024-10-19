@@ -1,0 +1,52 @@
+.button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include responsive-property(height, 56px, 42px, 42px, 36px, 36px);
+  @include responsive-property(width, 56px, 42px, 42px, 36px, 36px);
+
+  svg {
+    width: 37.5%;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: inherit;
+  }
+
+  @include hover {
+    opacity: 0.8;
+    border-style: solid;
+  }
+}
+
+.orange {
+  border: 1px dashed $orange;
+
+  path {
+    stroke: $orange;
+  }
+}
+
+.yellow {
+  border: 1px dashed $yellow;
+
+  path {
+    stroke: $yellow;
+  }
+}
+
+.blue {
+  border: 1px dashed $gray-blue;
+
+  path {
+    stroke: $gray-blue;
+  }
+}
+
+.left {
+  svg {
+    transform: rotate(180deg);
+  }
+}

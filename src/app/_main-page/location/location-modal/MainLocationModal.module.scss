@@ -1,0 +1,210 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: $black;
+  z-index: $z-index-modal-overlay;
+}
+
+.modal {
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  outline: none;
+  height: 100dvh;
+  width: 100vw;
+  overflow: hidden;
+  z-index: $z-index-modal;
+  background-color: $background-yellow;
+}
+
+.closeButton {
+  @include responsive-property(top, 30px, 25px, 20px, 20px, 17px);
+  @include responsive-property(right, 30px, 25px, 20px, 20px, 13px);
+
+  position: absolute;
+  z-index: $z-index-modal;
+}
+
+.content {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  @include responsive-property(gap, 40px, 40px, 30px, 20px, 20px);
+
+  @include tablet {
+    display: inherit;
+    overflow: hidden scroll;
+  }
+  @include mobile {
+    display: inherit;
+    overflow: hidden scroll;
+  }
+}
+
+.map {
+  position: relative;
+  @include responsive-property(width, 990px, 760px, 669px, 768px, 360px);
+
+  height: 100dvh;
+
+  @include tablet {
+    height: wv-768(546px);
+  }
+  @include mobile {
+    height: wv-360(361px);
+  }
+}
+
+.blurred {
+  position: absolute;
+  top: 0;
+  right: 0;
+  @include responsive-property(width, 170px, 107px, 95px, 768px, 360px);
+
+  height: 100%;
+  background: linear-gradient(to left, $background-yellow, transparent);
+  @include tablet {
+    display: none;
+  }
+  @include mobile {
+    display: none;
+  }
+}
+
+.info {
+  @include responsive-property(width, 890px, 640px, 581px, 728px, 330px);
+  @include responsive-spacing(padding-right, 60px, 45px, 40px, 0px, 0px);
+  @include responsive-spacing(padding-bottom, 60px, 45px, 40px, 20px, 15px);
+
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+
+  @include tablet {
+    width: 100%;
+    overflow-y: hidden;
+    padding-top: #{apply-wv(20px, wv-768)};
+  }
+  @include mobile {
+    width: 100%;
+    overflow-y: hidden;
+    padding-top: #{apply-wv(20px, wv-360)};
+  }
+}
+
+.titles {
+  @include responsive-property(width, 547px, 377px, 377px, 377px, 274px);
+  @include responsive-spacing(margin-top, 60px, 45px, 40px, 30px, 30px);
+  @include responsive-spacing(margin-bottom, 60px, 45px, 40px, 30px, 30px);
+  @include tablet {
+    margin-left: #{apply-wv(20px, wv-768)};
+  }
+  @include mobile {
+    margin-left: #{apply-wv(15px, wv-360)};
+  }
+}
+
+.titlesTablet {
+  display: none;
+  @include tablet {
+    display: block;
+  }
+  @include mobile {
+    display: block;
+  }
+}
+
+.titlesDekstop {
+  @include tablet {
+    display: none;
+  }
+  @include mobile {
+    display: none;
+  }
+}
+
+.title {
+  @include p3;
+
+  text-transform: uppercase;
+  color: $orange;
+  @include responsive-spacing(margin-bottom, 40px, 30px, 25px, 22px, 20px);
+}
+
+.description {
+  @include t2;
+
+  color: $orange;
+}
+
+.slides {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-x: visible;
+  flex-grow: 1;
+}
+
+.slidesOnFoot {
+  display: flex;
+  flex-wrap: wrap;
+  @include responsive-property(gap, 20px, 15px, 15px, 12px, 10px);
+  @include tablet {
+    flex-wrap: nowrap;
+    width: 100%;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    padding-right: #{apply-wv(20px, wv-768)};
+    padding-left: #{apply-wv(20px, wv-768)};
+  }
+  @include mobile {
+    flex-wrap: nowrap;
+    width: 100%;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    padding-right: #{apply-wv(15px, wv-360)};
+    padding-left: #{apply-wv(15px, wv-360)};
+  }
+}
+
+.slideOnFoot {
+  @include responsive-property(width, 405px, 290px, 263px, 173px, 168px);
+
+  flex-shrink: 0;
+}
+
+.slidesByCar {
+  @include responsive-spacing(margin-top, 60px, 45px, 40px, 36px, 30px);
+
+  display: flex;
+  @include responsive-property(gap, 20px, 15px, 15px, 12px, 0px);
+
+  @include tablet {
+    padding-right: #{apply-wv(20px, wv-768)};
+    padding-left: #{apply-wv(20px, wv-768)};
+  }
+  @include mobile {
+    flex-direction: column;
+    padding-right: #{apply-wv(15px, wv-360)};
+    padding-left: #{apply-wv(15px, wv-360)};
+  }
+}
+
+.iconByCar {
+  @include responsive-property(width, 32px, 28px, 28px, 20px, 20px);
+  @include responsive-spacing(margin-bottom, 10px, 10px, 10px, 10px, 10px);
+}
+
+.iconByCarNotFirst {
+  @include mobile {
+    display: none;
+  }
+}
+
+.columnByCar {
+  width: 50%;
+  @include mobile {
+    width: 100%;
+  }
+}

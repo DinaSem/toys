@@ -1,0 +1,95 @@
+.wrapper {
+  width: 100%;
+  @include responsive-spacing(padding, 150px 10px, 110px 10px, 100px 10px, 70px 10px, 60px 10px);
+}
+
+.riverfrontContent {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bgImageWrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+
+  & img {
+    object-fit: cover;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, $orange -500%, #00000013 100%);
+    z-index: 1;
+  }
+}
+
+.title {
+  @include h2;
+  @include responsive-property(margin-top, 120px, 90px, 70px, 60px, 50px);
+  @include responsive-property(width, 615px, 510px, 460px, 365px, 285px);
+
+  text-transform: uppercase;
+  color: $white;
+  margin-top: wv-1440(90px);
+  height: fit-content;
+  text-align: center;
+}
+
+.card {
+  @include responsive-property(width, 380px, 285px, 255px, 255px, 255px);
+  @include responsive-property(height, 518px, 387px, 350px, 341px, 372px);
+  @include responsive-property(margin-top, 80px, 60px, 50px, 40px, 40px);
+  @include responsive-property(padding, 20px, 15px, 15px, 12px, 10px);
+
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  & button {
+    @include responsive-property(margin-top, 20px, 15px, 15px, 12px, 10px);
+
+    width: 100%;
+  }
+}
+
+.cardImgWrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.description {
+  @include t1;
+  @include responsive-property(width, 328px, 314px, 218px, 277px, 266px);
+  @include responsive-property(margin-top, 20px, 26px, 20px, 15px, 15px);
+  @include responsive-property(margin-bottom, 70px, 40px, 45px, 35px, 35px);
+
+  color: $white;
+  text-align: center;
+
+  @include laptop {
+    @include t2;
+  }
+}
+
+.line {
+  border: 1px solid $white;
+
+  @include responsive-property(height, 92px, 69px, 62px, 63px, 62px);
+  @include responsive-property(margin-top, 30px, 15px, 15px, 12px, 10px);
+}

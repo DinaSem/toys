@@ -1,0 +1,129 @@
+.overlayPanorama {
+  position: fixed;
+  inset: 0;
+  background: $modal-overlay;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: $z-index-modal-overlay;
+}
+
+.modalContent {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: $modal-overlay;
+}
+
+.closeButton {
+  @include responsive-property(top, 30px, 27px, 20px, 20px, 17px);
+  @include responsive-property(right, 38px, 39px, 20px, 20px, 13px);
+
+  position: fixed;
+  z-index: $z-index-modal;
+}
+
+.panoramaWrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.draggableImage {
+  width: 300%;
+  height: 100%;
+  pointer-events: all;
+  cursor:
+    url('/images/panorama-cursor.svg') 40 16,
+    grab !important;
+  transform: translateX(-1000px);
+  opacity: 0;
+  transition: opacity 0.7s ease;
+
+  @include tablet {
+    width: 500%;
+  }
+
+  @include mobile {
+    width: 700%;
+  }
+
+  &.visible {
+    opacity: 1;
+  }
+}
+
+.overlayMessage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: $modal-overlay;
+  color: white;
+  z-index: $z-index-modal-overlay;
+  pointer-events: none;
+
+  @include tablet {
+    display: flex;
+  }
+
+  @include tablet {
+    display: flex;
+  }
+}
+
+.overlayContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $modal-overlay;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.overlayText {
+  @include p3;
+
+  text-transform: uppercase;
+  margin-bottom: 0;
+
+  @include tablet {
+    width: wv-768(376px);
+  }
+
+  @include mobile {
+    width: wv-360(280px);
+  }
+}
+
+.swipeIcon {
+  @include tablet {
+    width: wv-768(90px);
+    height: wv(81px);
+    margin-top: wv-768(18px);
+  }
+
+  @include mobile {
+    width: wv-360(71px);
+    height: wv-360(64px);
+    margin-top: wv-360(18px);
+  }
+
+  & svg {
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,198 @@
+.section {
+  overflow: visible;
+  @include responsive-spacing(padding-top, 150px, 110px, 100px, 70px, 60px);
+  @include responsive-spacing(padding-bottom, 150px, 110px, 100px, 70px, 60px);
+  @include tablet {
+    overflow: hidden;
+  }
+  @include mobile {
+    overflow: hidden;
+  }
+}
+
+.title {
+  @include responsive-spacing(padding-left, 187px, 110px, 100px, 18px, 15px);
+  @include p5;
+
+  text-transform: uppercase;
+  color: $gray-blue;
+}
+
+.main {
+  @include responsive-spacing(margin-top, 40px, 30px, 25px, 22px, 20px);
+
+  display: flex;
+  justify-content: space-between;
+  @include responsive-property(gap, 19px, 0px, 3px, 30px, 20px);
+  @include tablet {
+    flex-direction: column;
+  }
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.subtitle {
+  @include h2;
+
+  text-transform: uppercase;
+  color: $gray-blue;
+  @include tablet {
+    width: #{apply-wv(608px, wv-768)};
+  }
+}
+
+.info {
+  @include responsive-property(width, 606px, 500px, 440px, 768px, 333px);
+  @include responsive-spacing(margin-left, 187px, 110px, 100px, 18px, 15px);
+  @include tablet {
+    padding-right: #{apply-wv(18px, wv-768)};
+  }
+}
+
+.sticky {
+  position: sticky;
+  left: 0;
+  top: #{apply-wv(44px, wv-1440)};
+  height: fit-content;
+  @include wide {
+    top: #{apply-wv(58px, wv-1920)};
+  }
+  @include standart {
+    top: #{apply-wv(44px, wv-1440)};
+  }
+  @include laptop {
+    top: #{apply-wv(44px, wv-1280)};
+  }
+  @include tablet {
+    position: relative;
+    top: inherit;
+    left: inherit;
+  }
+  @include mobile {
+    position: relative;
+    top: inherit;
+    left: inherit;
+  }
+}
+
+.content {
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.contentSecond {
+  @include tablet {
+    width: #{apply-wv(360px, wv-768)};
+    margin-right: #{apply-wv(18px, wv-768)};
+  }
+}
+
+.authors {
+  @include responsive-spacing(margin-top, 60px, 45px, 40px, 30px, 30px);
+  @include responsive-property(width, 207px, 150px, 134px, 134px, 134px);
+  @include responsive-property(height, 38px, 28px, 28px, 28px, 28px);
+  @include t3;
+}
+
+.logo {
+  position: relative;
+  @include responsive-spacing(margin-top, 20px, 15.5px, 15px, 12px, 12px);
+  @include responsive-property(width, 162px, 122px, 109px, 109px, 109px);
+  @include responsive-property(height, 34px, 27px, 24px, 24px, 24px);
+}
+
+.description {
+  @include responsive-spacing(margin-top, 50px, 35px, 30px, 30px, 26px);
+  @include responsive-property(width, 449px, 310px, 280px, 320px, 320px);
+  @include responsive-property(height, 66px, 80px, 72px, 72px, 72px);
+  @include t1;
+
+  color: rgb(0 0 0 / 70%);
+
+  [class*='highlighted'] {
+    color: $gray-blue;
+  }
+}
+
+.fadeIn {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fadeOut {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.gallery {
+  @include responsive-property(height, 1490px, 1120px, 1000px, 460px, 440px);
+  @include responsive-property(width, 1098px, 820px, 727px, 768px, 360px);
+  @include responsive-spacing(margin-right, 10px, 10px, 10px, 0px, 0px);
+
+  overflow: hidden;
+
+  @include tablet {
+    overflow: visible;
+    padding-left: #{apply-wv(18px, wv-768)};
+    padding-right: #{apply-wv(18px, wv-768)};
+  }
+
+  @include mobile {
+    overflow: visible;
+    padding-left: #{apply-wv(15px, wv-360)};
+    padding-right: #{apply-wv(15px, wv-360)};
+  }
+
+  [class*='swiper-slide'] {
+    @include wide {
+      margin-right: 0 !important;
+    }
+    @include standart {
+      margin-right: 0;
+    }
+    @include laptop {
+      margin-right: 0 !important;
+    }
+  }
+}
+
+.slide {
+  @include responsive-property(width, 1098px, 820px, 727px, 710px, 315px);
+
+  position: relative;
+  height: 100%;
+}
+
+.btnArrows {
+  position: relative;
+  display: flex;
+  @include responsive-spacing(margin-top, 80px, 60px, 50px, 30px, 40px);
+  @include responsive-property(height, 56px, 42px, 42px, 36px, 42px);
+  @include responsive-property(gap, 20px, 15px, 15px, 15px, 15px);
+  @include tablet {
+    justify-content: space-between;
+  }
+
+  [class*='MainArchitectureSlider-arrows-slider'] {
+    position: relative;
+    top: inherit;
+    right: inherit;
+    bottom: inherit;
+    left: inherit;
+  }
+}
+
+.arrows {
+  display: flex;
+  column-gap: 10px;
+  @include mobile {
+    display: none;
+  }
+}
+
+.image {
+  width: 100%;
+}

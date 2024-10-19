@@ -1,0 +1,71 @@
+@use 'sass:meta';
+@use 'sass:list';
+
+@mixin responsive-property($property, $wide, $normal, $laptop, $tablet, $mobile) {
+  #{$property}: wv-1440($normal);
+
+  @include wide {
+    #{$property}: wv-1920($wide);
+  }
+
+  @include laptop {
+    #{$property}: wv-1280($laptop);
+  }
+
+  @include tablet {
+    #{$property}: wv-768($tablet);
+  }
+
+  @include mobile {
+    #{$property}: wv-360($mobile);
+  }
+}
+
+@function apply-wv($values, $wv-function) {
+  $result: ();
+  @each $value in $values {
+    $transformed-value: meta.call($wv-function, $value);
+    $result: list.append($result, $transformed-value, space);
+  }
+  @return $result;
+}
+
+@mixin responsive-spacing($property, $wide, $normal, $laptop, $tablet, $mobile) {
+  #{$property}: #{apply-wv($normal, wv-1440)};
+
+  @include wide {
+    #{$property}: #{apply-wv($wide, wv-1920)};
+  }
+
+  @include laptop {
+    #{$property}: #{apply-wv($laptop, wv-1280)};
+  }
+
+  @include tablet {
+    #{$property}: #{apply-wv($tablet, wv-768)};
+  }
+
+  @include mobile {
+    #{$property}: #{apply-wv($mobile, wv-360)};
+  }
+}
+
+@mixin non-responsive-property($property, $wide, $normal, $laptop, $tablet, $mobile) {
+  #{$property}: $normal;
+
+  @include wide {
+    #{$property}: $wide;
+  }
+
+  @include laptop {
+    #{$property}: $laptop;
+  }
+
+  @include tablet {
+    #{$property}: $tablet;
+  }
+
+  @include mobile {
+    #{$property}: $mobile;
+  }
+}

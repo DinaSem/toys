@@ -1,0 +1,121 @@
+.section {
+  @include responsive-spacing(padding-top, 150px, 110px, 100px, 70px, 60px);
+  @include responsive-spacing(padding-bottom, 150px, 110px, 100px, 70px, 60px);
+}
+
+.infoBlock {
+  display: flex;
+  flex-direction: column;
+  @include responsive-spacing(padding-left, 30px, 25px, 20px, 18px, 15px);
+  @include responsive-spacing(padding-right, 30px, 25px, 20px, 18px, 15px);
+
+  @include mobile {
+    position: relative;
+  }
+}
+
+.titles {
+  @include responsive-property(width, 828px, 640px, 736px, 560px, 345px);
+}
+
+.title {
+  @include p5;
+
+  text-transform: uppercase;
+  color: $yellow;
+}
+
+.subtitle {
+  @include responsive-spacing(margin-top, 40px, 30px, 25px, 22px, 20px);
+  @include h2;
+
+  text-transform: uppercase;
+  color: $yellow;
+}
+
+.tabs {
+  @include tabs-text;
+  @include responsive-spacing(margin-top, 80px, 60px, 50px, 40px, 60px);
+  @include responsive-property(height, 56px, 42px, 42px, 36px, 42px);
+
+  display: flex;
+  white-space: nowrap;
+
+  @include tablet {
+    margin-left: wv-768(-18px);
+    margin-right: wv-768(-18px);
+    padding-left: wv-768(18px);
+    padding-right: wv-768(18px);
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  @include mobile {
+    margin-left: wv-360(-15px);
+    margin-right: wv-360(-15px);
+    padding-left: wv-360(15px);
+    padding-right: wv-360(15px);
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.tab {
+  @include responsive-property(min-width, 184px, 138px, 124px, 122px, 115px);
+
+  padding: wv-1440(15px) !important;
+  flex-shrink: 0;
+
+  @include wide {
+    padding: wv-1920(20px) !important;
+  }
+
+  @include laptop {
+    padding: wv-1280(15px) !important;
+  }
+
+  @include tablet {
+    padding: wv-768(12px) !important;
+  }
+
+  @include tablet-l {
+    padding: wv-768(12px) !important;
+  }
+
+  @include tablet-p {
+    padding: wv-768(12px) !important;
+  }
+
+  @include mobile {
+    padding: wv-360(15px) wv-360(10px) !important;
+  }
+}
+
+.tab:not(:first-child) {
+  margin-left: -1px;
+}
+
+.gallerySlider {
+  @include responsive-spacing(padding-left, 10px, 10px, 25px, 18px, 15px);
+  @include responsive-spacing(padding-top, 40px, 30px, 25px, 22px, 40px);
+
+  position: relative;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+
+  &.hidden {
+    opacity: 0;
+  }
+}

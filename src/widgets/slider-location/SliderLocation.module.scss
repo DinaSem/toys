@@ -1,0 +1,90 @@
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:nth-child(6n + 1) {
+    .image {
+      @include responsive-property(width, 466px, 350px, 310px, 220px, 160px);
+      @include responsive-property(height, 466px, 350px, 310px, 220px, 160px);
+    }
+  }
+
+  &:nth-child(6n + 2) {
+    .image {
+      @include responsive-property(width, 400px, 300px, 266px, 190px, 160px);
+      @include responsive-property(height, 400px, 300px, 266px, 190px, 190px);
+    }
+  }
+
+  &:nth-child(6n + 3) {
+    .image {
+      @include responsive-property(width, 337px, 255px, 225px, 170px, 160px);
+      @include responsive-property(height, 337px, 255px, 225px, 170px, 190px);
+    }
+  }
+
+  &:nth-child(6n + 4) {
+    .image {
+      @include responsive-property(width, 400px, 300px, 266px, 190px, 160px);
+      @include responsive-property(height, 400px, 300px, 266px, 190px, 160px);
+    }
+  }
+
+  &:nth-child(6n + 5) {
+    .image {
+      @include responsive-property(width, 337px, 255px, 225px, 170px, 160px);
+      @include responsive-property(height, 337px, 255px, 225px, 170px, 160px);
+    }
+  }
+
+  &:nth-child(6n + 6) {
+    .image {
+      @include responsive-property(width, 400px, 300px, 266px, 190px, 160px);
+      @include responsive-property(height, 400px, 300px, 266px, 190px, 190px);
+    }
+  }
+}
+
+.sliderArrows {
+  @include tablet {
+    display: none;
+  }
+}
+
+.image {
+  position: relative;
+}
+
+.text {
+  max-width: 200px;
+  @include responsive-property(max-width, 200px, 150px, 150px, 150px, 150px);
+  @include responsive-spacing(margin-top, 40px, 30px, 25px, 22px, 15px);
+
+  text-align: center;
+  color: $orange;
+}
+
+.title {
+  @include p3;
+
+  text-transform: uppercase;
+}
+
+.description {
+  @include t1;
+  @include responsive-spacing(margin-top, 10px, 15px, 15px, 12px, 8px);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: #{apply-wv(20px, wv-360)};
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

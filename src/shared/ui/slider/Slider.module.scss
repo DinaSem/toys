@@ -1,0 +1,16 @@
+.arrows {
+  display: flex;
+  column-gap: 10px;
+  position: absolute;
+  @include responsive-property(top, -56px, -42px, -42px, -36px, -42px);
+  @include responsive-spacing(right, 30px, 25px, 20px, 18px, 15px);
+  @include mobile {
+    display: flex;
+  }
+}
+
+.hiddenOnMobile {
+  @include mobile {
+    display: none;
+  }
+}

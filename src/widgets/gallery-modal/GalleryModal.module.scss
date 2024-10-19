@@ -1,0 +1,69 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  background: $modal-overlay;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modalContent {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.closeButton {
+  @include responsive-property(top, 30px, 27px, 20px, 20px, 17px);
+  @include responsive-property(right, 38px, 39px, 20px, 20px, 13px);
+
+  position: absolute;
+  z-index: $z-index-modal;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: $z-index-modal-overlay;
+}
+
+.image {
+  position: relative;
+}
+
+.modalSlide {
+  display: block;
+
+  .image {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+  }
+}
+
+.modalArrows {
+  @include responsive-property(bottom, 30px, 27px, 20px, 20px, 17px);
+
+  top: auto !important;
+  z-index: 11;
+
+  & button {
+    border: 1px solid transparent;
+    background-color: $white;
+  }
+}
+
+.slidesCount {
+  @include p3;
+
+  position: fixed;
+  color: $white;
+  z-index: 1;
+  margin-bottom: 0;
+
+  @include responsive-property(left, 30px, 25px, 20px, 20px, 15px);
+  @include responsive-property(bottom, 39px, 30px, 25px, 28px, 23px);
+}

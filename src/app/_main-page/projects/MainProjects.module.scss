@@ -1,0 +1,121 @@
+.section {
+  @include responsive-spacing(padding-top, 150px, 110px, 100px, 70px, 60px);
+  @include responsive-spacing(padding-bottom, 150px, 110px, 100px, 70px, 60px);
+  @include responsive-spacing(padding-left, 30px, 25px, 20px, 18px, 15px);
+  @include responsive-spacing(padding-right, 30px, 25px, 20px, 18px, 15px);
+}
+
+.wrapper {
+  border: 1px dashed $orange-50 !important;
+  display: flex;
+  flex-direction: row;
+  @include tablet {
+    flex-direction: column;
+  }
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.firstBlock {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  @include responsive-spacing(padding, 80px, 60px, 50px, 40px, 30px);
+
+  padding-bottom: wv-1440(58px);
+
+  @include wide {
+    width: 50%;
+    padding-bottom: wv-1920(100px);
+  }
+  @include laptop {
+    width: 50%;
+    padding-bottom: wv-1280(46px);
+  }
+  @include tablet {
+    width: 100%;
+    padding-bottom: wv-768(50px);
+  }
+  @include mobile {
+    width: 100%;
+    padding-bottom: wv-360(40px);
+  }
+}
+
+.secondBlock {
+  position: relative;
+  display: flex;
+  width: 50%;
+  @include responsive-spacing(padding-top, 16px, 16px, 12px, 0.1px, 0.1px);
+  @include responsive-spacing(padding-bottom, 16px, 15.56px, 11.5px, 10px, 10px);
+  @include responsive-spacing(padding-left, 0.1px, 9px, 0.1px, 10px, 10px);
+  @include responsive-spacing(padding-right, 16px, 16px, 12px, 10px, 10px);
+
+  @include wide {
+    width: 50%;
+  }
+
+  @include tablet {
+    width: 100%;
+  }
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  @include tablet {
+    height: wv-768(348px);
+  }
+  @include mobile {
+    height: wv-360(305px);
+    object-fit: cover;
+
+    img {
+      object-position: left;
+    }
+  }
+}
+
+.title {
+  @include h2;
+
+  max-width: 80%;
+  text-transform: uppercase;
+  color: $orange;
+  @include responsive-spacing(margin-bottom, 26px, 20px, 20px, 20px, 15px);
+  @include laptop {
+    max-width: 80%;
+  }
+  @include tablet {
+    max-width: 65%;
+  }
+  @include mobile {
+    max-width: 100%;
+  }
+}
+
+.description {
+  max-width: 76%;
+  @include t1;
+
+  color: $orange;
+  @include responsive-spacing(margin-bottom, 80px, 60px, 50px, 40px, 30px);
+  @include wide {
+    max-width: 64%;
+  }
+  @include laptop {
+    max-width: 75%;
+  }
+  @include mobile {
+    max-width: 100%;
+  }
+}
+
+.btn {
+  @include responsive-spacing(height, 56px, 42px, 42px, 36px, 42px);
+}

@@ -1,0 +1,51 @@
+.button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include responsive-property(height, 56px, 42px, 42px, 36px, 36px);
+  @include responsive-property(width, 56px, 42px, 42px, 36px, 36px);
+
+  svg {
+    @include responsive-property(height, 20px, 16px, 16px, 16px, 16px);
+    @include responsive-property(width, 20px, 16px, 16px, 16px, 16px);
+  }
+
+  @include hover {
+    opacity: 0.8;
+    border-style: solid;
+  }
+}
+
+.orange {
+  border: 1px dashed $orange;
+
+  path {
+    stroke: $orange;
+  }
+}
+
+.yellow {
+  border: 1px dashed $yellow;
+
+  path {
+    stroke: $yellow;
+  }
+}
+
+.blue {
+  border: 1px dashed $gray-blue;
+
+  path {
+    stroke: $gray-blue;
+  }
+}
+
+.white {
+  border: 1px solid transparent;
+  background-color: $white;
+
+  path {
+    stroke: $orange;
+  }
+}

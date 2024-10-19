@@ -1,0 +1,33 @@
+export const api = {
+  root: '/api/v2/1111',
+  rootSimple: '/api/1111',
+  urlMenu: '/menu',
+  urlMenuCard: '/table_block/menu_infocard',
+  urlButtons: '/menu/main_buttons',
+  urlLandscaping: '/slider/main_landscaping-info',
+  urlLandscapingSlider: '/slider/main_landscaping',
+  urlLocationInfo: '/slider/main_location-info',
+  urlLocationOnFoot: '/slider/main_location_byfoot',
+  urlLocationByCar: '/slider/main_location_bycar',
+  urlLocationModal: '/slider/main_location-modal',
+  urlArchitecture: '/promo_cards/main_architecture',
+  urlFooterMenuLeft: '/footer_left',
+  urlFooterMenuRight: '/footer_right',
+  urlAboutMain: '/slider/main_about',
+  urlPhotoCards: '/slider/main_infocard',
+  urlLifestyleIconsMain: '/slider/main_lifestyle-icons',
+  urlLifestyleSliderMain: '/promo_cards/main_lifestyle-slider',
+  urlMainGallery: '/gallery?page=main_photogallery',
+  urlMainGalleryMobile: '/gallery?page=main_photogallery_mobile',
+  urlTeamSliderMain: '/promo_cards/main_projectteam',
+  urlRiverfront: '/promo_cards/main_viewonwater',
+  urlTeamInfoMain: '/single-page/main_projectteam-info',
+  urlFlatsInfo: '/slider/main_flats-info',
+  urlFlatsGallery: '/gallery?page=main_flats',
+  urlProjects: '/table_block/main_anotherproject',
+  urlPolicy: '/single-page/policy',
+
+  revalidationSeconds: 20,
+};
+
+export const baseUrl = process.env.NEXT_PUBLIC_DOMAIN_API;

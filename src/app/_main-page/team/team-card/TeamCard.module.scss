@@ -1,0 +1,103 @@
+.card {
+  border: 1px dashed $gray-blue;
+  position: relative;
+  transition: all 0.3s ease;
+  @include responsive-property(width, 450px, 336px, 299px, 300px, 290px);
+  @include responsive-property(height, 480px, 360px, 320px, 320px, 290px);
+  @include responsive-spacing(padding, 30px, 25px, 20px, 18px, 15px);
+
+  color: $gray-blue;
+
+  &.opened {
+    background-color: $gray-blue;
+    color: $white;
+  }
+}
+
+.cardImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  .logo {
+    position: relative;
+    @include responsive-property(width, 300px, 225px, 200px, 200px, 200px);
+    @include responsive-property(height, 110px, 80px, 72px, 72px, 72px);
+  }
+}
+
+.cardContent {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  &.cardContentOpened {
+    justify-content: space-between;
+  }
+}
+
+.cardContentTop {
+  height: 100%;
+  display: flex;
+}
+
+.cardContentBottom {
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: end;
+  align-items: center;
+  @include responsive-property(gap, 10px, 5px, 5px, 5px, 5px);
+}
+
+.iconOpen {
+  @include responsive-property(width, 53px, 40px, 36px, 36px, 36px);
+  @include responsive-property(height, 53px, 40px, 36px, 36px, 36px);
+  @include responsive-property(min-width, 53px, 40px, 36px, 36px, 36px);
+  @include responsive-property(min-height, 53px, 40px, 36px, 36px, 36px);
+
+  fill: $gray-blue;
+
+  &.iconClose {
+    transform: rotate(45deg);
+    fill: $gray-blue-light;
+  }
+}
+
+.name {
+  @include p4;
+
+  text-transform: uppercase;
+  text-align: flex-end;
+  margin-bottom: 0;
+}
+
+.title {
+  @include t1;
+
+  text-transform: uppercase;
+  text-align: start;
+
+  p {
+    font-weight: 450;
+    @include responsive-property(margin-bottom, 20px, 15px, 15px, 15px, 15px);
+  }
+}
+
+.description {
+  @include t2;
+
+  line-height: 120%;
+  transition:
+    max-height 0.3s ease,
+    opacity 0.3s ease;
+  @include responsive-property(padding-right, 49px, 25px, 31px, 32px, 32px);
+}

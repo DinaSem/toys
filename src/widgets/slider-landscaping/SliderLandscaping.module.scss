@@ -1,0 +1,151 @@
+.sliderWrapper {
+  position: relative;
+}
+
+.slide {
+  @include responsive-spacing(margin-right, 200px, 132px, 120px, 184px, 10px);
+
+  .image {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .text {
+    cursor: pointer;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:nth-child(4n + 1) {
+    z-index: 2;
+
+    .image {
+      @include responsive-property(width, 606px, 453px, 403px, 374px, 290px);
+      @include responsive-property(height, 800px, 600px, 530px, 500px, 290px);
+      @include responsive-spacing(margin-top, 179px, 135px, 120px, 69px, 0px);
+    }
+
+    display: flex;
+    align-items: flex-end;
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .textWrapper {
+      position: relative;
+    }
+
+    .text {
+      position: absolute;
+      bottom: 100%;
+      left: 100%;
+      @include non-responsive-property(width, 261px, 227px, 204px, 204px, 290px);
+      @include responsive-spacing(margin-left, 30px, 25px, 20px, 18px, 0px);
+    }
+  }
+
+  &:nth-child(4n + 2) {
+    z-index: 1;
+
+    .image {
+      @include responsive-property(width, 450px, 337px, 300px, 280px, 290px);
+      @include responsive-property(height, 630px, 470px, 420px, 400px, 290px);
+    }
+
+    .text {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      @include non-responsive-property(width, 338px, 300px, 270px, 270px, 290px);
+      @include responsive-spacing(margin-left, 30px, 25px, 20px, 18px, 0px);
+    }
+  }
+
+  &:nth-child(4n + 3) {
+    @include responsive-spacing(margin-right, 200px, 184px, 145px, 100px, 10px);
+
+    .image {
+      @include responsive-property(width, 745px, 560px, 500px, 490px, 290px);
+      @include responsive-property(height, 571px, 430px, 380px, 350px, 290px);
+      @include responsive-spacing(margin-top, 268px, 183px, 163px, 112px, 0px);
+    }
+
+    .text {
+      @include non-responsive-property(width, 434px, 320px, 284px, 284px, 290px);
+      @include responsive-spacing(margin-top, 30px, 25px, 20px, 18px, 15px);
+    }
+  }
+
+  &:nth-child(4n + 4) {
+    .image {
+      @include responsive-property(width, 745px, 560px, 500px, 470px, 290px);
+      @include responsive-property(height, 444px, 331px, 295px, 270px, 290px);
+      @include responsive-spacing(margin-top, 96px, 72px, 72px, 0px, 0px);
+    }
+
+    .text {
+      @include non-responsive-property(width, 476px, 357px, 320px, 320px, 290px);
+      @include responsive-spacing(margin-top, 30px, 25px, 20px, 18px, 15px);
+    }
+  }
+
+  &:nth-child(1n) {
+    .text {
+      @include mobile {
+        position: relative;
+        top: inherit;
+        right: inherit;
+        bottom: inherit;
+        left: inherit;
+        margin-top: #{apply-wv(15px, wv-360)};
+        margin-left: 0;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.fiveSlides {
+  &:last-child {
+    @include non-responsive-property(margin-right, 291px, 252px, 224px, 222px, 0px);
+  }
+}
+
+.sixSlides {
+  &:last-child {
+    @include non-responsive-property(margin-right, 368px, 325px, 290px, 288px, 0px);
+  }
+}
+
+.title {
+  @include p4;
+
+  text-transform: uppercase;
+  color: $gray-blue;
+}
+
+.description {
+  @include t1;
+  @include responsive-spacing(margin-top, 10px, 15px, 15px, 12px, 8px);
+
+  p {
+    margin-bottom: 0;
+  }
+
+  [class*='highlighted'] {
+    color: $gray-blue;
+  }
+}
+
+.sliderArrows {
+  top: 0;
+  right: 0;
+  z-index: 1;
+
+  @include tablet {
+    top: wv-768(calc(-66px));
+  }
+}

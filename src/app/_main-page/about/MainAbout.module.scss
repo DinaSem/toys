@@ -1,0 +1,99 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include responsive-property(margin-top, 150px, 110px, 100px, 70px, 60px);
+  @include responsive-property(margin-bottom, 150px, 115px, 105px, 74px, 60px);
+  @include responsive-property(margin-left, 500px, 376px, 334px, 142px, 15px);
+  @include responsive-property(margin-right, 500px, 376px, 334px, 142px, 15px);
+
+  overflow: hidden;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $orange;
+}
+
+.madam {
+  svg {
+    @include responsive-property(width, 142px, 106px, 94.22px, 67.3px, 67.3px);
+    @include responsive-property(height, 174px, 130px, 115.56px, 82.54px, 82.54px);
+  }
+
+  padding: wv-1440(25px) wv-1440(22px);
+  @include responsive-property(margin-bottom, 40px, 30px, 25px, 23px, 20px);
+
+  @include wide {
+    padding: wv-1920(33px) wv-1920(29px);
+  }
+
+  @include laptop {
+    padding: wv-1280(22px) wv-1280(23px);
+  }
+
+  @include tablet {
+    padding: wv-768(16px);
+  }
+
+  @include mobile {
+    padding: wv-360(16px);
+  }
+}
+
+.aboutTitle {
+  @include p5;
+
+  text-transform: uppercase;
+  font-weight: 450;
+  letter-spacing: 0.62em;
+  @include responsive-property(margin-bottom, 40px, 30px, 25px, 22px, 20px);
+}
+
+.text {
+  @include h2;
+
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  display: inline-block !important;
+  max-width: 100%;
+  @include responsive-property(margin-bottom, 40px, 30px, 25px, 22px, 15px);
+}
+
+.descriptions {
+  @include t1;
+
+  text-align: center;
+  padding-left: wv-1440(81px);
+  padding-right: wv-1440(81px);
+
+  @include wide {
+    padding-left: wv-1920(180px);
+    padding-right: wv-1920(180px);
+  }
+
+  @include laptop {
+    padding-left: wv-1280(109px);
+    padding-right: wv-1280(109px);
+  }
+
+  @include tablet {
+    padding-left: wv-768(82px);
+    padding-right: wv-768(82px);
+  }
+
+  @include mobile {
+    padding-left: wv-360(22px);
+    padding-right: wv-360(22px);
+  }
+}
+
+.lineParent,
+.linesChild {
+  overflow: hidden;
+  display: inline-block !important;
+}

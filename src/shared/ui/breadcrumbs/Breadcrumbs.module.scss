@@ -1,0 +1,29 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  @include responsive-property(gap, 8px, 6px, 6px, 6px, 6px);
+
+  li,
+  p {
+    margin: 0;
+  }
+
+  a,
+  p,
+  span {
+    @include t3;
+
+    text-transform: uppercase;
+    color: $orange;
+  }
+
+  a {
+    cursor: pointer;
+    transition: all 0.3s;
+    opacity: 0.5;
+    @include hover {
+      opacity: 1;
+    }
+  }
+}

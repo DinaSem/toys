@@ -1,0 +1,221 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  color: $orange;
+  @include responsive-property(padding-top, 30px, 41px, 26px, 36px, 25px);
+  @include responsive-property(padding-bottom, 55px, 55px, 42px, 40px, 35px);
+  @include responsive-property(margin-left, 10px, 10px, 10px, 10px, 15px);
+  @include responsive-property(margin-right, 10px, 10px, 10px, 63px, 15px);
+
+  border-top: wv-1440(1px) dashed $orange-50;
+
+  @include wide {
+    border-top: wv-1920(1px) dashed $orange-50;
+  }
+
+  @include laptop {
+    border-top: wv-1280(1px) dashed $orange-50;
+  }
+
+  @include tablet {
+    border-top: wv-768(1px) dashed $orange-50;
+  }
+
+  @include mobile {
+    border-top: wv-360(1px) dashed $orange-50;
+    flex-direction: column;
+  }
+}
+
+.logo {
+  @include responsive-property(width, 67px, 67px, 67px, 67px, 44px);
+  @include responsive-property(height, 67px, 67px, 67px, 67px, 44px);
+  @include mobile {
+    display: none;
+  }
+}
+
+.logoMobile {
+  display: none;
+  @include mobile {
+    width: wv-360(44px);
+    height: wv-360(44px);
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.contactsBlock {
+  @include p3;
+
+  display: flex;
+  flex-direction: column;
+  @include responsive-property(padding-left, 100px, 100px, 26px, 36px, 0.01px);
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.left {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  position: relative;
+}
+
+.navigationBlockWrapper {
+  display: flex;
+  flex-direction: row;
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.navigationBlockLeft {
+  @include t1-medium;
+
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  @include responsive-property(margin-left, 80px, 110px, 70px, 40px, 0.1px);
+
+  & a {
+    @include responsive-property(margin-bottom, 8px, 8px, 8px, 8px, 8px);
+
+    color: $orange;
+    @include hover {
+      opacity: 0.8;
+    }
+  }
+  @include mobile {
+    margin-bottom: wv-360(20px);
+  }
+}
+
+.navigationBlockRight {
+  @include t3;
+
+  display: flex;
+  flex-direction: column;
+  @include responsive-property(margin-left, 54px, 102px, 48px, 50px, 0.1px);
+
+  & a {
+    @include responsive-property(margin-bottom, 4px, 4px, 4px, 4px, 4px);
+
+    color: $orange;
+    @include hover {
+      opacity: 0.8;
+    }
+  }
+  @include mobile {
+    margin-bottom: wv-360(40px);
+  }
+}
+
+.phone {
+  & a {
+    color: $orange;
+    @include hover {
+      opacity: 0.8;
+    }
+  }
+  @include responsive-property(margin-bottom, 4px, 4px, 4px, 4px, 4px);
+}
+
+.email {
+  @include responsive-property(margin-bottom, 30px, 25px, 25px, 12px, 20px);
+}
+
+.address {
+  display: flex;
+  flex-direction: row;
+  @include responsive-property(gap, 5px, 5px, 5px, 5px, 5px);
+  @include t1-medium;
+
+  text-transform: uppercase;
+  @include tablet {
+    flex-direction: column;
+  }
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.bottom {
+  background-color: $orange;
+  color: $white;
+  padding: wv-1440(170px) wv-1440(25px) wv-1440(25px);
+
+  @include wide {
+    padding: wv-1920(229px) wv-1920(30px) wv-1920(30px);
+  }
+
+  @include laptop {
+    padding: wv-1280(144px) wv-1280(20px) wv-1280(20px);
+  }
+
+  @include tablet {
+    padding: wv-768(157px) wv-768(15px) wv-768(15px);
+  }
+
+  @include mobile {
+    padding: wv-360(157px) wv-360(15px) wv-360(35px);
+  }
+}
+
+.project {
+  display: flex;
+  flex-direction: row;
+  @include t2;
+
+  text-transform: uppercase;
+  @include responsive-property(margin-bottom, 20px, 15px, 15px, 12px, 10px);
+  @include responsive-property(gap, 5px, 5px, 5px, 5px, 5px);
+  @include tablet {
+    flex-direction: column;
+  }
+}
+
+.logoForma {
+  @include responsive-property(width, 180px, 135px, 120px, 120px, 119px);
+  @include responsive-property(height, 38px, 28.5px, 27px, 27px, 25px);
+  @include responsive-property(margin-bottom, 60px, 45px, 40px, 35px, 37px);
+}
+
+.bottomLinks {
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  @include t2;
+  @include responsive-property(gap, 50px, 50px, 50px, 50px, 15px);
+}
+
+.only {
+  @include tr;
+}
+
+.designMiddle {
+  display: block;
+  @include tablet {
+    display: none;
+  }
+}
+
+.designLast {
+  display: none;
+  @include tablet {
+    display: block;
+  }
+}

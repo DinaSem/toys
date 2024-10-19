@@ -1,0 +1,231 @@
+.belmarContainer {
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+.content {
+  @include responsive-property(height, 1080px, 810px, 720px, 620px, 620px);
+  @include responsive-property(margin-top, 301px, 226px, 199px, 134px, 82px);
+  @include responsive-property(padding, 20px, 15px, 15px, 12px, 10px);
+
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.bgImageWrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bgImage {
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/main-belmar/BelmarBackground.webp');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  opacity: 0;
+}
+
+.belmarTitle {
+  width: 100%;
+  padding: 0 wv-1440(15px) wv-1440(15px);
+  font-weight: normal;
+  text-align: center;
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  @include responsive-property(top, -201px, -156px, -139px, -84px, -37px);
+
+  @include wide {
+    padding: 0 wv-1920(20px);
+  }
+
+  @include laptop {
+    padding: 0 wv-1280(15px) wv-1280(15px);
+  }
+
+  @include tablet {
+    padding: 0 wv-768(12px) wv-768(12px);
+  }
+
+  @include mobile {
+    padding: 0 wv-360(10px) wv-360(10px);
+  }
+}
+
+.logoWrapper {
+  width: 100%;
+  opacity: 0;
+  position: relative;
+  @include responsive-property(height, 340px, 255px, 227px, 133px, 62px);
+
+  & svg {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.logoBall {
+  position: absolute;
+  z-index: 1;
+  @include responsive-property(height, 114.45px, 85.84px, 76.3px, 44.87px, 30px);
+  @include responsive-property(width, 114.45px, 85.84px, 76.3px, 44.87px, 30px);
+  @include responsive-property(left, 144.5px, 102px, 91px, 46px, 25px);
+  @include responsive-property(bottom, 5px, -6.5px, -6px, -6px, -4px);
+}
+
+.textAndCards {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.descriptionDesktop,
+.descriptionMobile {
+  @include h1;
+
+  color: $white;
+  text-transform: uppercase;
+  margin-bottom: 0 !important;
+}
+
+.descriptionDesktop {
+  @include tablet {
+    display: none;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.descriptionMobile {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+
+  @include mobile {
+    display: block;
+  }
+}
+
+.photoCards {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  color: $white;
+  visibility: hidden;
+
+  @include responsive-property(gap, 15px, 15px, 15px, 12px, 15px);
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.photoCardsMobile {
+  display: none;
+
+  @include mobile {
+    display: flex;
+    flex-direction: row;
+    color: $white;
+    gap: wv-360(15px);
+    margin-top: wv-360(20px);
+    overflow-x: auto;
+    padding: 0 10px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.card a {
+  text-decoration: none;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  @include mobile {
+    flex-direction: row;
+    width: wv-360(325px);
+    gap: wv-360(15px);
+  }
+}
+
+.card {
+  &:nth-child(odd) {
+    background-color: $gray-blue;
+  }
+
+  &:nth-child(even) {
+    background-color: $orange;
+  }
+}
+
+.cardImageWrapper {
+  @include responsive-property(width, 325px, 240px, 208px, 170px, 132px);
+  @include responsive-property(height, 373px, 277px, 245px, 175px, 132px);
+  @include responsive-property(margin, 10px, 10px, 10px, 5px, 4px);
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardDescription {
+  @include t3;
+  @include responsive-property(width, 235px, 175px, 170px, 160px, 159px);
+  @include responsive-property(height, 57px, 42px, 42px, 42px, 42px);
+
+  @include tablet {
+    margin-bottom: wv-768(12px);
+  }
+
+  @include mobile {
+    margin-bottom: 0;
+  }
+}
+
+.container {
+  @include responsive-property(width, 1140px, 800px, 750px, 346px, 321px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.line {
+  @include responsive-property(height, 110px, 82.5px, 71.5px, 44px, 35px);
+
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  span {
+    position: absolute;
+    opacity: 0;
+  }
+}
