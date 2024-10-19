@@ -1,5 +1,6 @@
 {
-  "name": "belmar-frontend",
+  "name": "new-year-toys",
+  "homepage": "https://DinaSem.github.io/toys",
   "version": "0.1.0",
   "private": true,
   "scripts": {
