@@ -17,7 +17,7 @@ const galleryDataa = [
   {
     _id: "66deff60f5e180caf14e29a4",
     title: "main_photogallery-landscaping",
-    text: "благоустройство",
+    text: "Северные",
     priority: 5,
     fileUrl: [
       '/images/gallery-images/zvery.jpg',
@@ -38,12 +38,59 @@ const galleryDataa = [
 
     ]
   },
+  {
+    _id: "66deff60f5e180caf14e29a4",
+    title: "main_photogallery-landscaping",
+    text: "Домашние",
+    priority: 5,
+    fileUrl: [
+      '/images/gallery-images/zvery.jpg',
+      '/images/gallery-images/olen.jpg',
+      '/images/gallery-images/mishka.jpg'
+    ],
+    mimeType: [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    slug: "main_photogallery-landscaping",
+    page: "main_photogallery",
+    hide_in_general: false,
+    galleryPage: [],
+    descriptions: [],
+    __v: 0,
+    absolutePath: [
+
+    ]
+  },
+  {
+    _id: "66deff60f5e180caf14e29a4",
+    title: "main_photogallery-landscaping",
+    text: "Африканские",
+    priority: 5,
+    fileUrl: [
+      '/images/gallery-images/zvery.jpg',
+      '/images/gallery-images/olen.jpg',
+      '/images/gallery-images/mishka.jpg'
+    ],
+    mimeType: [
+      "image/jpeg",
+      "image/jpeg"
+    ],
+    slug: "main_photogallery-landscaping",
+    page: "main_photogallery",
+    hide_in_general: false,
+    galleryPage: [],
+    descriptions: [],
+    __v: 0,
+    absolutePath: [
+    ]
+  },
 ]
 
 export const MainGalleryClient = ({ data, mobileData }: MainGalleryClientProps) => {
 
-  const filteredData = galleryDataa.filter(tab => !tab.hide_in_general);
-  const filteredMobileData = mobileData.filter(tab => tab);
+  const filteredData = galleryDataa.filter(tab => tab);
+  const filteredMobileData = galleryDataa.filter(tab => tab);
   const [active, setActive] = useState(0);
   const [isFading, setIsFading] = useState(false);
   const { isMobile } = useDevice();
