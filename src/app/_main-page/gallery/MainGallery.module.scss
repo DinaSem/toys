@@ -73,7 +73,7 @@
 }
 
 .tab {
-  @include responsive-property(min-width, 184px, 138px, 124px, 122px, 115px);
+  @include responsive-property(min-width, 184px, 138px, 124px, 122px, 110px);
 
   padding: wv-1440(15px) !important;
   flex-shrink: 0;

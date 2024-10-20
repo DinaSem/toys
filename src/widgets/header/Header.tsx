@@ -95,7 +95,7 @@ export const Header = ({ children }: { children: React.ReactNode[] }) => {
           </div>
           <div className={styles.logo}>
             <Link href='/#photogallery'>
-             Галерея
+             Авторские игрушки Семеновой Дины
             </Link>
           </div>
 
@@ -104,28 +104,28 @@ export const Header = ({ children }: { children: React.ReactNode[] }) => {
           {/*    <Logo />*/}
           {/*  </Link>*/}
           {/*</div>*/}
-          <Button  type='button' variaton='menu' transparent className={styles.numberBtn}>
-            еще что-то
-          </Button>
-          <Button
-            link='tel:+74951651158'
-            type='button'
-            variaton='menu'
-            transparent
-            className={styles.numberBtnAdaptive}
-          >
-            {/*<div className={styles.phoneWrapper}>*/}
-            {/*  <PhoneIcon />*/}
-            {/*</div>*/}
-          </Button>
+          {/*<Button  type='button' variaton='menu' transparent className={styles.numberBtn}>*/}
+          {/*  еще что-то*/}
+          {/*</Button>*/}
+          {/*<Button*/}
+          {/*  link='tel:+74951651158'*/}
+          {/*  type='button'*/}
+          {/*  variaton='menu'*/}
+          {/*  transparent*/}
+          {/*  className={styles.numberBtnAdaptive}*/}
+          {/*>*/}
+          {/*  /!*<div className={styles.phoneWrapper}>*!/*/}
+          {/*  /!*  <PhoneIcon />*!/*/}
+          {/*  /!*</div>*!/*/}
+          {/*</Button>*/}
         </div>
 
-        <Button type='button' variaton='menu' className={styles.catalogBtn}>
-          Оставить заявку
-        </Button>
-        <Button type='button' variaton='menu' className={styles.catalogBtn}>
-          Оставить заявку
-        </Button>
+        {/*<Button type='button' variaton='menu' className={styles.catalogBtn}>*/}
+        {/*  Оставить заявку*/}
+        {/*</Button>*/}
+        {/*<Button type='button' variaton='menu' className={styles.catalogBtn}>*/}
+        {/*  Оставить заявку*/}
+        {/*</Button>*/}
       </div>
       <Menu setIsOpen={setMenuOpen} isOpen={menuOpen}>
         {children[1]}

@@ -120,7 +120,7 @@ export const MainBelmarClient = ({ cards }: MainBelmarClientProps) => {
 
   return (
     <>
-      <section className={styles.belmarContainer} ref={sectionRef}>
+      <section className={styles.belmarContainer} ref={sectionRef} id='main'>
         <div className={styles.content}>
           <div className={styles.bgImageWrapper}>
             <div className={styles.bgImage} ref={imageRef}></div>

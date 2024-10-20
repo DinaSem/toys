@@ -28,12 +28,12 @@ export default function RootLayout({
     <html lang='ru' className={ysabeau.variable}>
       <body>
         <StoreProvider>
-          {/*<Header>*/}
-          {/*  <HeaderLinks />*/}
-          {/*  <MenuItems />*/}
-          {/*</Header>*/}
+          <Header>
+            <HeaderLinks />
+            <MenuItems />
+          </Header>
           {children}
-          {/*<Footer />*/}
+          <Footer />
         </StoreProvider>
       </body>
     </html>

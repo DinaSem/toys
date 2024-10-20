@@ -9,8 +9,8 @@
   align-items: center;
 
     .image {
-      @include responsive-property(width, 493px, 369px, 329px, 195px, 135px);
-      @include responsive-property(height, 742px, 557px, 495px, 294px, 203px);
+      @include responsive-property(width, 493px, 369px, 329px, 195px, 195px);
+      @include responsive-property(height, 742px, 557px, 495px, 294px, 294px);
     }
 
 }

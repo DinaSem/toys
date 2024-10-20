@@ -9,9 +9,9 @@
   flex-direction: row;
   color: $orange;
   @include responsive-property(padding-top, 30px, 41px, 26px, 36px, 25px);
-  @include responsive-property(padding-bottom, 55px, 55px, 42px, 40px, 35px);
-  @include responsive-property(margin-left, 10px, 10px, 10px, 10px, 15px);
-  @include responsive-property(margin-right, 10px, 10px, 10px, 63px, 15px);
+  //@include responsive-property(padding-bottom, 55px, 55px, 42px, 40px, 35px);
+  //@include responsive-property(margin-left, 10px, 10px, 10px, 10px, 15px);
+  //@include responsive-property(margin-right, 10px, 10px, 10px, 63px, 15px);
 
   border-top: wv-1440(1px) dashed $orange-50;
 
@@ -36,9 +36,8 @@
 .logo {
   @include responsive-property(width, 67px, 67px, 67px, 67px, 44px);
   @include responsive-property(height, 67px, 67px, 67px, 67px, 44px);
-  @include mobile {
-    display: none;
-  }
+  display: flex;
+  justify-content: center;
 }
 
 .logoMobile {
@@ -155,22 +154,22 @@
 .bottom {
   background-color: $orange;
   color: $white;
-  padding: wv-1440(170px) wv-1440(25px) wv-1440(25px);
+  padding: wv-1440(25px) wv-1440(25px);
 
   @include wide {
-    padding: wv-1920(229px) wv-1920(30px) wv-1920(30px);
+    padding: wv-1920(30px) wv-1920(30px);
   }
 
   @include laptop {
-    padding: wv-1280(144px) wv-1280(20px) wv-1280(20px);
+    padding:  wv-1280(20px) wv-1280(20px);
   }
 
   @include tablet {
-    padding: wv-768(157px) wv-768(15px) wv-768(15px);
+    padding: wv-768(15px) wv-768(15px);
   }
 
   @include mobile {
-    padding: wv-360(157px) wv-360(15px) wv-360(35px);
+    padding:  wv-360(15px) wv-360(15px);
   }
 }
 
