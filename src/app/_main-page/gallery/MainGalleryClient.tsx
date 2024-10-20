@@ -20,9 +20,10 @@ const galleryDataa = [
     text: "Северные",
     priority: 5,
     fileUrl: [
-      '/images/gallery-images/zvery.jpg',
-      '/images/gallery-images/olen.jpg',
-      '/images/gallery-images/mishka.jpg'
+      '/images/gallery-images/polarBear.jpg',
+      '/images/gallery-images/reindeer.jpg',
+      '/images/gallery-images/reindeerOnHand.jpg',
+      '/images/gallery-images/penguin.jpg'
     ],
     mimeType: [
       "image/jpeg",
@@ -44,9 +45,12 @@ const galleryDataa = [
     text: "Домашние",
     priority: 5,
     fileUrl: [
-      '/images/gallery-images/zvery.jpg',
-      '/images/gallery-images/olen.jpg',
-      '/images/gallery-images/mishka.jpg'
+      '/images/gallery-images/dog.jpg',
+      '/images/gallery-images/dogOnHand.jpg',
+      '/images/gallery-images/goos.jpg',
+      '/images/gallery-images/gooseOnHand.jpg',
+      '/images/gallery-images/rabbit.jpg',
+      '/images/gallery-images/rabbitOnHand.jpg'
     ],
     mimeType: [
       "image/jpeg",
@@ -68,9 +72,11 @@ const galleryDataa = [
     text: "Африканские",
     priority: 5,
     fileUrl: [
-      '/images/gallery-images/zvery.jpg',
-      '/images/gallery-images/olen.jpg',
-      '/images/gallery-images/mishka.jpg'
+      '/images/gallery-images/elephantOnHand.jpg',
+      '/images/gallery-images/flamingo.jpg',
+      '/images/gallery-images/flamingoOnHand.jpg',
+      '/images/gallery-images/giraffe.jpg',
+      '/images/gallery-images/giraffeOnHand.jpg'
     ],
     mimeType: [
       "image/jpeg",
@@ -115,7 +121,7 @@ export const MainGalleryClient = ({ data, mobileData }: MainGalleryClientProps) 
         <div className={styles.titles}>
           <h2 className={styles.title}>Фотогалерея</h2>
           <div className={styles.subtitle}>
-            <AnimatedTitle text={'атмосфера красивой и беззаботной жизни'} />
+            <AnimatedTitle text={'Коллекция ватных игрушек в ретро стиле'} />
           </div>
         </div>
         <div>

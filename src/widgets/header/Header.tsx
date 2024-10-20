@@ -72,21 +72,21 @@ export const Header = ({ children }: { children: React.ReactNode[] }) => {
       ref={headerRef}
     >
       <div className={styles.header}>
-        {menuOpen ? (
-          <Button type='button' variaton='menu' className={styles.menuBtnClose} onClick={toggleMenu}>
-            <div className={styles.closeMenuIcon}>
-              <CloseMenuIcon width={12} height={12} />
-            </div>
-            <span>Закрыть</span>
-          </Button>
-        ) : (
-          <Button type='button' variaton='menu' transparent className={styles.menuBtn} onClick={toggleMenu}>
-            <div className={styles.menuIcon}>
-              <MenuIcon width={28} height={12} />
-            </div>
-            <span>Меню</span>
-          </Button>
-        )}
+        {/*{menuOpen ? (*/}
+        {/*  <Button type='button' variaton='menu' className={styles.menuBtnClose} onClick={toggleMenu}>*/}
+        {/*    <div className={styles.closeMenuIcon}>*/}
+        {/*      <CloseMenuIcon width={12} height={12} />*/}
+        {/*    </div>*/}
+        {/*    <span>Закрыть</span>*/}
+        {/*  </Button>*/}
+        {/*) : (*/}
+        {/*  <Button type='button' variaton='menu' transparent className={styles.menuBtn} onClick={toggleMenu}>*/}
+        {/*    <div className={styles.menuIcon}>*/}
+        {/*      <MenuIcon width={28} height={12} />*/}
+        {/*    </div>*/}
+        {/*    <span>Меню</span>*/}
+        {/*  </Button>*/}
+        {/*)}*/}
         <div className={styles.headerContent}>
           <div className={styles.linksWrapper}>
             <ul className={`${styles.menulist} ${menuOpen ? styles.linksHidden : styles.linksVisible}`}>
@@ -94,12 +94,18 @@ export const Header = ({ children }: { children: React.ReactNode[] }) => {
             </ul>
           </div>
           <div className={styles.logo}>
-            <Link href='/'>
-              <Logo />
+            <Link href='/#photogallery'>
+             Галерея
             </Link>
           </div>
-          <Button link='tel:+74951651158' type='button' variaton='menu' transparent className={styles.numberBtn}>
-            +7 (495) 165 11 58
+
+          {/*<div className={styles.logo}>*/}
+          {/*  <Link href='/'>*/}
+          {/*    <Logo />*/}
+          {/*  </Link>*/}
+          {/*</div>*/}
+          <Button  type='button' variaton='menu' transparent className={styles.numberBtn}>
+            еще что-то
           </Button>
           <Button
             link='tel:+74951651158'
@@ -108,12 +114,15 @@ export const Header = ({ children }: { children: React.ReactNode[] }) => {
             transparent
             className={styles.numberBtnAdaptive}
           >
-            <div className={styles.phoneWrapper}>
-              <PhoneIcon />
-            </div>
+            {/*<div className={styles.phoneWrapper}>*/}
+            {/*  <PhoneIcon />*/}
+            {/*</div>*/}
           </Button>
         </div>
 
+        <Button type='button' variaton='menu' className={styles.catalogBtn}>
+          Оставить заявку
+        </Button>
         <Button type='button' variaton='menu' className={styles.catalogBtn}>
           Оставить заявку
         </Button>

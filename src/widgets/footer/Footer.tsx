@@ -5,14 +5,38 @@ import Link from 'next/link';
 import { fetchFooterMenus } from '@/shared/lib/fetches/fetchMenu/fetchFooterMenus';
 
 export const Footer = async () => {
+
   const footerData = await fetchFooterMenus();
 
   if (!footerData || footerData === null) {
     return null;
   }
 
-  const footerMenuLeft = footerData?.footerMenuLeft?.menuItems;
-  const footerMenuRight = footerData?.footerMenuRight?.menuItems;
+  const footerMenuLeft = {
+    _id: "66dee55ff5e180caf14dd770",
+    name: "footer_left",
+    __v: 0,
+    menuItems: [
+      {
+        highlight: false,
+        hide: false,
+        targetBlank: false,
+        items: [],
+        value: "о проекте",
+        path: "/#about",
+        id: 1
+      },
+      {
+        highlight: false,
+        hide: false,
+        targetBlank: false,
+        items: [],
+        value: "расположение",
+        path: "/#location",
+        id: 2
+      },
+    ]}
+  const footerMenuRight = footerData?.footerMenuRight?.menuItems || null;
   return (
     <footer>
       <div className={styles.container}>
@@ -26,7 +50,7 @@ export const Footer = async () => {
             </div>
             <div className={styles.navigationBlockWrapper}>
               <div className={styles.navigationBlockLeft}>
-                {footerMenuLeft?.map(item => (
+                {footerMenuLeft.menuItems?.map(item => (
                   <Link href={item.path} key={item.path}>
                     {item.value}
                   </Link>

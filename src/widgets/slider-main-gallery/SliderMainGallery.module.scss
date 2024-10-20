@@ -8,33 +8,11 @@
   flex-direction: column;
   align-items: center;
 
-  &:nth-child(4n + 1) {
     .image {
-      @include responsive-property(width, 1060px, 795px, 707px, 420px, 290px);
-      @include responsive-property(height, 650px, 485px, 430px, 260px, 250px);
+      @include responsive-property(width, 493px, 369px, 329px, 195px, 135px);
+      @include responsive-property(height, 742px, 557px, 495px, 294px, 203px);
     }
-  }
 
-  &:nth-child(4n + 2) {
-    .image {
-      @include responsive-property(width, 555px, 420px, 370px, 220px, 220px);
-      @include responsive-property(height, 420px, 315px, 280px, 170px, 250px);
-    }
-  }
-
-  &:nth-child(4n + 3) {
-    .image {
-      @include responsive-property(width, 600px, 450px, 400px, 240px, 290px);
-      @include responsive-property(height, 535px, 400px, 356px, 214px, 250px);
-    }
-  }
-
-  &:nth-child(4n + 4) {
-    .image {
-      @include responsive-property(width, 555px, 420px, 370px, 220px, 220px);
-      @include responsive-property(height, 420px, 315px, 280px, 170px, 250px);
-    }
-  }
 }
 
 .sliderArrows {

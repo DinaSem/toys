@@ -14,7 +14,7 @@ import { MainContacts } from '@/app/_main-page/contacts/MainContacts';
 export default function Home() {
   return (
     <main>
-      {/*<MainBelmar />*/}
+      <MainBelmar />
       {/*<MainAbout />*/}
       {/*<MainLandscaping />*/}
       {/*<MainFlats />*/}

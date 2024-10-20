@@ -127,19 +127,19 @@ export const MainBelmarClient = ({ cards }: MainBelmarClientProps) => {
           </div>
           <div className={styles.belmarTitle}>
             <div className={styles.logoWrapper} ref={titleRef}>
-              <h1 style={{ display: 'none' }}>BELMAR</h1>
-              <BelmarTitle />
-              <div ref={ballRef} className={styles.logoBall}>
-                <TitleBall />
-              </div>
+              <h1 className={styles.soon}>Скоро</h1>
+
+              {/*<div ref={ballRef} className={styles.logoBall}>*/}
+              {/*  <TitleBall />*/}
+              {/*</div>*/}
             </div>
           </div>
           <div className={styles.textAndCards}>
             <div className={styles.descriptionDesktop}>
-              <TextRevealAnimation lines={['Южная атмосфера', 'севера москвы']} />
+              <TextRevealAnimation lines={['Праздник', 'к нам приходит']} />
             </div>
             <div className={styles.descriptionMobile}>
-              <TextRevealAnimation lines={['Южная', 'атмосфера', 'севера москвы']} />
+              <TextRevealAnimation lines={['Праздник', 'к нам приходит']} />
             </div>
             {cards?.length > 0 && (
               <div ref={cardsRef} className={styles.photoCards}>
@@ -151,11 +151,11 @@ export const MainBelmarClient = ({ cards }: MainBelmarClientProps) => {
           </div>
         </div>
       </section>
-      {cards?.length > 0 && (
-        <div className={styles.photoCardsMobile}>
-          {cards.map((card, index) => card.image && card.title?.descriptions && <PhotoCard key={index} card={card} />)}
-        </div>
-      )}
+      {/*{cards?.length > 0 && (*/}
+      {/*  <div className={styles.photoCardsMobile}>*/}
+      {/*    {cards.map((card, index) => card.image && card.title?.descriptions && <PhotoCard key={index} card={card} />)}*/}
+      {/*  </div>*/}
+      {/*)}*/}
     </>
   );
 };
