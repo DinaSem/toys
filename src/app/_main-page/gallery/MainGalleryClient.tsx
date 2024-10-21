@@ -73,6 +73,7 @@ const galleryDataa = [
     priority: 5,
     fileUrl: [
       '/images/gallery-images/elephantOnHand.jpg',
+      '/images/gallery-images/elephant.jpg',
       '/images/gallery-images/flamingo.jpg',
       '/images/gallery-images/flamingoOnHand.jpg',
       '/images/gallery-images/giraffe.jpg',

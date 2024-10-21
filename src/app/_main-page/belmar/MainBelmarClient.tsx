@@ -7,6 +7,7 @@ import { PhotoCard } from './photo-card/PhotoCard';
 import BelmarTitle from '@/shared/assets/icons/BelmarTitle.svg';
 import TitleBall from '@/shared/assets/icons/TitleBall.svg';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import {AnimatedTitle} from "@/shared/ui/animated-title/AnimatedTitle";
 
 interface MainBelmarClientProps {
   cards: IPhotoCard[];
@@ -136,10 +137,11 @@ export const MainBelmarClient = ({ cards }: MainBelmarClientProps) => {
           </div>
           <div className={styles.textAndCards}>
             <div className={styles.descriptionDesktop}>
-              <TextRevealAnimation lines={['Праздник', 'к нам приходит']} />
+              {/*<TextRevealAnimation lines={['Праздник', 'к нам приходит']} />*/}
+              <AnimatedTitle text={'Праздник к нам приходит'} />
             </div>
             <div className={styles.descriptionMobile}>
-              <TextRevealAnimation lines={['Праздник', 'к нам приходит']} />
+              <AnimatedTitle text={'Праздник к нам приходит'} />
             </div>
             {cards?.length > 0 && (
               <div ref={cardsRef} className={styles.photoCards}>
